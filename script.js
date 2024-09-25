@@ -54,7 +54,7 @@ function SearchTodo(SearchInput) {
   let FilteredTasks = StoreArr.filter((item) =>
     item.toLowerCase().includes(searchQuery)
   );
-  console.log(FilteredTasks);
+ // console.log(FilteredTasks);
 
   if (FilteredTasks.length === 0) {
     let Div = document.createElement("Div");
