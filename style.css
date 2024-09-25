@@ -96,7 +96,21 @@ img#AddTodo {
   gap: 6px;
   flex-direction: column;
 }
-
+.text {
+  display: flex;
+  gap: 13pc;
+  flex-direction: row;
+  align-items: center;
+}
+#searchTodo {
+  border-radius: 6px;
+  border: 0.1px solid #e91e63;
+  padding: 5px;
+  color: white;
+  outline: none;
+  background: transparent;
+  flex: 1;
+}
 .ToDoList {
   border: 3px solid #2d2f38;
   border-radius: 5px 9px;
@@ -142,7 +156,7 @@ button {
 
 @media (max-width: 600px) {
   .top {
-    align-items: stretch; 
+    align-items: stretch;
   }
 
   img#AddTodo {
@@ -150,14 +164,20 @@ button {
   }
 
   #ToDoInput {
-    margin-bottom: 10px; 
+    margin-bottom: 10px;
   }
 
   .box {
-    padding: 5px; 
+    padding: 5px;
   }
 
   .ToDoList {
-    padding: 5px; 
+    padding: 5px;
+  }
+  .text {
+    display: flex;
+    gap: 1pc;
+    flex-direction: column;
+    align-items: center;
   }
 }
