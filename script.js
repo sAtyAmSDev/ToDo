@@ -1,6 +1,7 @@
 const ToDoInput = document.getElementById("ToDoInput");
 const AddTodoBTN = document.getElementById("AddTodoBTN");
 const TODO = document.getElementById("TODO");
+const searchTodo = document.getElementById("searchTodo");
 
 function lodeToDos() {
   try {
@@ -42,7 +43,30 @@ function lodeToDosInDisplay() {
   }
 }
 
+function SearchTodo(SearchInput) {
+  let searchQuery = SearchInput.value.toLowerCase();
+  TODO.innerHTML = "";
 
+  if (searchQuery === " ") {
+    lodeToDosInDisplay();
+    return;
+  }
+  let FilteredTasks = StoreArr.filter((item) =>
+    item.toLowerCase().includes(searchQuery)
+  );
+  console.log(FilteredTasks);
+
+  if (FilteredTasks.length === 0) {
+    let Div = document.createElement("Div");
+    Div.className = "ToDoList";
+    Div.innerHTML = `<div class="TodoText">No matching tasks found!</div>`;
+    TODO.appendChild(Div);
+  } else {
+    FilteredTasks.forEach((item) => {
+      addTodoToDOM(item);
+    });
+  }
+}
 
 function addTodoToDOM(todoText) {
   if (todoText === "") {
@@ -105,6 +129,5 @@ function DeleteFunction(deleteIcon) {
   localStorage.setItem("ToDoArray", JSON.stringify(StoreArr));
   parentDiv.remove();
 }
-
 
 lodeToDosInDisplay();
