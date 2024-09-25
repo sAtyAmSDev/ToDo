@@ -58,14 +58,14 @@ function addTodoToDOM(todoText) {
       <img
         class="checkBox"
         onclick="CheckBoxFunction(this)"
-        src="/image/check_box_outline.png"
+        src="path/to/check_box_outline.png"
         alt=""
         srcset=""
       />
       <img
         class="Delete"
         onclick="DeleteFunction(this)"
-        src="/image/Delete.png"
+        src="path/to/Delete.png"
         alt=""
         srcset=""
       />
@@ -81,10 +81,10 @@ function CheckBoxFunction(checkBox) {
 
       if (checkBox.src.endsWith("/check_box_outline.png")) {
         TodoText.style.textDecoration = "line-through";
-        checkBox.src = "/image/check_box.png";
+        checkBox.src = "path/to/check_box.png";
       } else if (checkBox.src.endsWith("/check_box.png")) {
         TodoText.style.textDecoration = "none";
-        checkBox.src = "/image/check_box_outline.png";
+        checkBox.src = "path/to/check_box_outline.png";
       }
     } else {
       console.log("parentDiv is not Found");
