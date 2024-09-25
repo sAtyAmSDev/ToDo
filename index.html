@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NextLevelToDoApp</title>
+  </head>
+  <body>
+    <div class="main">
+      <div class="top">
+        <input
+          id="ToDoInput"
+          placeholder="Add Your Task"
+          type="text"
+          value=""
+          max="40"
+          min="0"
+        />
+        <button type="submit" id="AddTodoBTN" onsubmit="AddTodoFn()">
+          <img id="AddTodo" src="/image/add.png" alt="" srcset="" />
+        </button>
+      </div>
+
+      <div class="box">
+        <div class="in">
+          <div class="text">All TODO</div>
+
+          <div id="TODO">
+            <!-- <div class="ToDoList">
+              <div class="TodoText">Empty !</div>
+              <div class="TodoIcon">
+                <img
+                  class="checkBox"
+                  src="/image/check_box_outline.png"
+                  alt=""
+                  srcset=""
+                />
+                <img
+                  class="Delete"
+               onclick="CheckBoxFunction()"
+                  src="/image/Delete.png"
+                  alt=""
+                  srcset=""
+                />
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
