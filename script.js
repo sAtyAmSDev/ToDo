@@ -58,7 +58,7 @@ function addTodoToDOM(todoText) {
       <img
         class="checkBox"
         onclick="CheckBoxFunction(this)"
-        src="'/image/check_box_outline.png"
+        src="/image/check_box_outline.png"
         alt=""
         srcset=""
       />
